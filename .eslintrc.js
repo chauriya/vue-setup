@@ -11,10 +11,6 @@ module.exports = {
       'error',
       {
         singleQuote: true
-      },
-      'editor.codeActionsOnSave',
-      {
-        'source.fixAll': true
       }
     ]
   },
