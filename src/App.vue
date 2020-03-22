@@ -1,30 +1,21 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view />
-  </div>
+  <v-app id="inspire">
+    <AppBar />
+    <v-content>
+      <v-container fluid>
+        <router-view :key="$route.fullPath" />
+      </v-container>
+    </v-content>
+  </v-app>
 </template>
+
 <script>
-import { loadLanguageAsync } from '@/plugins/i18n';
+import AppBar from '@/components/AppBar';
+
 export default {
-  created() {
-    this.setLocale();
-  },
-  data: () => ({
-    languagesTitle: 'Languages',
-    twoCharacterLanguageCode: 'EN'
-  }),
-  methods: {
-    // default setup for languages
-    setLocale(locale = 'en-US') {
-      void loadLanguageAsync(locale).then(() => {
-        this.languagesTitle = this.$t('L_PRE_EN');
-        this.twoCharacterLanguageCode = 'EN';
-      });
-    }
+  name: 'App',
+  components: {
+    AppBar
   }
 };
 </script>
