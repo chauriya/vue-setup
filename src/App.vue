@@ -7,7 +7,27 @@
     <router-view />
   </div>
 </template>
-
+<script>
+import { loadLanguageAsync } from '@/plugins/i18n';
+export default {
+  created() {
+    this.setLocale();
+  },
+  data: () => ({
+    languagesTitle: 'Languages',
+    twoCharacterLanguageCode: 'EN'
+  }),
+  methods: {
+    // default setup for languages
+    setLocale(locale = 'en-US') {
+      void loadLanguageAsync(locale).then(() => {
+        this.languagesTitle = this.$t('L_PRE_EN');
+        this.twoCharacterLanguageCode = 'EN';
+      });
+    }
+  }
+};
+</script>
 <style lang="scss">
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
