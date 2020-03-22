@@ -1,0 +1,47 @@
+<template>
+  <v-app-bar app clipped-left color="primary" dark>
+    <v-btn icon>
+      <v-icon>mdi-arrow-left</v-icon>
+    </v-btn>
+    <v-spacer></v-spacer>
+    <h1 class="text-center">{{ $t(sectionTitle) }}</h1>
+    <v-spacer></v-spacer>
+  </v-app-bar>
+</template>
+
+<script>
+import { loadLanguageAsync } from '@/plugins/i18n';
+import { mapState } from 'vuex';
+
+export default {
+  name: 'app-bar',
+  components: {},
+  data: () => ({
+    languagesTitle: 'Languages',
+    twoCharacterLanguageCode: 'EN'
+  }),
+  created() {
+    this.setLocale();
+  },
+  computed: {
+    ...mapState('ui', ['sectionTitle'])
+  },
+  methods: {
+    // default setup for languages
+    setLocale(locale = 'en-US') {
+      void loadLanguageAsync(locale).then(() => {
+        this.languagesTitle = this.$t('L_PRE_EN');
+        this.twoCharacterLanguageCode = 'EN';
+      });
+    }
+  }
+};
+</script>
+
+<style lang="scss">
+$pri-nav-blue: var(--v-accent-base);
+.pri-app-title {
+  position: absolute;
+  left: 64px;
+}
+</style>
