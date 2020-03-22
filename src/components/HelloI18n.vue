@@ -5,7 +5,7 @@
 <script>
 export default {
   name: 'HelloI18n'
-}
+};
 </script>
 
 <i18n>
