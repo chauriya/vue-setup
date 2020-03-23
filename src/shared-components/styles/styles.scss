@@ -1,0 +1,8 @@
+@mixin required {
+  content: " *";
+}
+@mixin requiredRed {
+  content: " *";
+  color: red;
+}
+
