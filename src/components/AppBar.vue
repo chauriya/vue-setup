@@ -1,5 +1,5 @@
 <template>
-  <v-app-bar app clipped-left color="primary" dark>
+  <v-app-bar app clipped-left>
     <v-btn icon>
       <v-icon>mdi-arrow-left</v-icon>
     </v-btn>
@@ -38,10 +38,17 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 $pri-nav-blue: var(--v-accent-base);
 .pri-app-title {
   position: absolute;
   left: 64px;
+}
+.theme--light.v-app-bar.v-toolbar.v-sheet {
+  background-color: navy !important;
+  color: white;
+}
+.v-btn__content {
+  color: white !important;
 }
 </style>

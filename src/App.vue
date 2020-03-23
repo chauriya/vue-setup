@@ -2,9 +2,6 @@
   <v-app id="inspire">
     <AppBar />
     <v-content>
-      <v-container fluid>
-        <router-view :key="$route.fullPath" />
-      </v-container>
       <Registration />
     </v-content>
   </v-app>

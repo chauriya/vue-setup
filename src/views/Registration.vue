@@ -1,17 +1,31 @@
 <template>
   <v-app id="registration">
     <AppBar />
-    <v-content>
-      <v-container fluid>
-        <h1>Welcome to Primerica Online Registration</h1>
-        <h2>Heaading 2</h2>
-        <PriBaseTextField componentName="Rep ID /User ID" />
-        <PriBaseTextField componentName="SSN / SIN" />
-        <PriDatepicker />
-        <PriBaseTextField componentName="Non Primerica Email Address" />
-        <PriBaseTextField componentName="Confrim Email Address" />
-      </v-container>
-    </v-content>
+    <v-container class="grey lighten-5">
+      <div>
+        <p class="headline text-center">
+          Welcome to Primerica Online Registration
+        </p>
+        <p class="subtitle-2 text-left">
+          Please enter the following personal information so that we can
+          identify you.
+        </p>
+      </div>
+      <PriBaseTextField componentName="Rep ID /User ID" />
+      <PriBaseTextField componentName="SSN / SIN" />
+      <PriDatepicker />
+      <PriBaseTextField componentName="Non Primerica Email Address" />
+      <PriBaseTextField componentName="Confrim Email Address" />
+      <div class="text-center">
+        <v-btn class="ma-2" outlined color="indigo">Cancel</v-btn>
+        <v-btn class="ma-2" color="indigo" disabled>Next</v-btn>
+      </div>
+      <div>
+        <p class="caption text-center font-weight-bold" style="color:darkblue">
+          Already have a POL account ?
+        </p>
+      </div>
+    </v-container>
   </v-app>
 </template>
 <script>
