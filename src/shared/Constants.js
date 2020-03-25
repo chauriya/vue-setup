@@ -6,6 +6,7 @@ const COUNTRY = {
 const STATES = {
   NAME: {
     REGISTRATION: 'registration',
+    CHANGEPASSWORD: 'ChangePassword',
     CONTACT_LOOKUP: 'life.landing.contactLookup',
     SELECT_CONTACT: 'life.landing.selectContact',
     SELECT_APPLICATION: 'life.landing.selectApplication',

@@ -1,28 +1,19 @@
 <template>
-  <v-app id="registration">
+  <v-app id="changepassword">
     <AppBar />
     <v-container class="grey lighten-5">
       <div>
-        <p class="headline text-center">
-          Welcome to Primerica Online Registration
-        </p>
-        <p class="subtitle-2 text-left">
-          Please enter the following personal information so that we can
-          identify you.
-        </p>
+        <p class="headline text-center">Set up your password to continue</p>
       </div>
-      <PriBaseTextField componentName="Rep ID /User ID" />
-      <PriBaseTextField componentName="SSN / SIN" />
-      <PriDatepicker />
-      <PriBaseTextField componentName="Non Primerica Email Address" />
-      <PriBaseTextField componentName="Confrim Email Address" />
+      <PriBaseTextField componentName="Create a new password" />
+      <PriBaseTextField componentName="Confrim password" />
       <div class="text-center">
         <v-btn class="ma-2" outlined color="indigo">Cancel</v-btn>
-        <v-btn class="ma-2 btnTypeOne" disabled>Next</v-btn>
+        <v-btn class="ma-2 btnTypeOne">Next</v-btn>
       </div>
       <div>
         <p class="caption text-center font-weight-bold" style="color:darkblue">
-          Already have a POL account ?
+          To avoid disconnection update billing information upon login
         </p>
       </div>
     </v-container>
@@ -30,14 +21,12 @@
 </template>
 <script>
 import PriBaseTextField from '../shared-components/BaseTextField';
-import PriDatepicker from '../shared-components/Datepicker';
 import { loadLanguageAsync } from '@/plugins/i18n';
 import { mapState } from 'vuex';
 export default {
   name: 'Registration',
   components: {
-    PriBaseTextField,
-    PriDatepicker
+    PriBaseTextField
   },
   data: () => ({
     languagesTitle: 'Languages',

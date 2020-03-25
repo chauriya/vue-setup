@@ -2,20 +2,20 @@
   <v-app id="inspire">
     <AppBar />
     <v-content>
-      <Registration />
+      <v-container fluid>
+        <router-view :key="$route.fullPath" />
+      </v-container>
     </v-content>
   </v-app>
 </template>
 
 <script>
 import AppBar from '@/components/AppBar';
-import Registration from '../src/views/Registration';
 
 export default {
   name: 'App',
   components: {
-    AppBar,
-    Registration
+    AppBar
   }
 };
 </script>
