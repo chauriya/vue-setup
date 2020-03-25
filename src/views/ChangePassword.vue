@@ -20,7 +20,7 @@
   </v-app>
 </template>
 <script>
-import PriBaseTextField from '../shared-components/BaseTextField';
+import PriBaseTextField from '@/shared-components/base/BaseTextField';
 import { loadLanguageAsync } from '@/plugins/i18n';
 import { mapState } from 'vuex';
 export default {

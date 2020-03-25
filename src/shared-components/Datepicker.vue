@@ -8,11 +8,13 @@
       :value="formattedValue"
       @blur="isFocused = false"
       @click:append="openDialog"
-      @focus="isFocused = true"
+      @focus="
+        isFocused = true;
+        openDialog();
+      "
       @input="onInput"
       @keypress="onlyNumericPlus($event, '/')"
       @paste.prevent
-      append-icon="mdi-calendar"
       ref="iconTarget"
     >
       <template v-slot:label>
@@ -55,7 +57,7 @@ import {
   MaskMixin,
   ValidationsMixin
 } from './mixins';
-import PriDialog from './components/Dialog/Dialog';
+import { PriDialog } from '@/shared-components';
 import _ from 'lodash';
 
 export default {
@@ -268,7 +270,15 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import './styles/styles';
+@mixin required {
+  content: ' *';
+}
+
+@mixin requiredRed {
+  content: ' *';
+  color: red;
+}
+
 .pri-required:after {
   @include required;
 }

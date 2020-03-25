@@ -11,11 +11,11 @@
           identify you.
         </p>
       </div>
-      <PriBaseTextField componentName="Rep ID /User ID" />
-      <PriBaseTextField componentName="SSN / SIN" />
+      <PriTextField componentName="Rep ID /User ID" />
+      <PriTextField componentName="SSN / SIN" />
       <PriDatepicker />
-      <PriBaseTextField componentName="Non Primerica Email Address" />
-      <PriBaseTextField componentName="Confrim Email Address" />
+      <PriTextField componentName="Non Primerica Email Address" />
+      <PriTextField componentName="Confrim Email Address" />
       <div class="text-center">
         <v-btn class="ma-2" outlined color="indigo">Cancel</v-btn>
         <v-btn class="ma-2 btnTypeOne" disabled>Next</v-btn>
@@ -29,14 +29,14 @@
   </v-app>
 </template>
 <script>
-import PriBaseTextField from '../shared-components/BaseTextField';
-import PriDatepicker from '../shared-components/Datepicker';
+import PriTextField from '@/shared-components/base/BaseTextField';
+import PriDatepicker from '@/shared-components/Datepicker';
 import { loadLanguageAsync } from '@/plugins/i18n';
 import { mapState } from 'vuex';
 export default {
   name: 'Registration',
   components: {
-    PriBaseTextField,
+    PriTextField,
     PriDatepicker
   },
   data: () => ({

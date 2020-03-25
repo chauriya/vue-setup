@@ -13,12 +13,12 @@ const routes = [
   {
     path: '/changePassword',
     component: ChangePassword,
-    name: STATES.NAME.CHANGEPASSWORD
+    name: STATES.NAME.CHANGE_PASSWORD
   },
   {
     path: '/verifyDetails',
     component: VerifyDetails,
-    name: STATES.NAME.CHANGEPASSWORD
+    name: STATES.NAME.VERIFY_DETAILS
   } /* ,
   {
     path: '/notFound',

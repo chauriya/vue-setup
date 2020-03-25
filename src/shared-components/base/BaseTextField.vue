@@ -38,8 +38,8 @@ import {
   KeypressMixin,
   MaskMixin,
   ValidationsMixin
-} from './mixins';
-import PriDialog from './components/Dialog/';
+} from '@/shared-components/mixins';
+import { PriDialog } from '@/shared-components';
 
 export default {
   name: 'pri-base-text-field',
@@ -100,7 +100,14 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import './styles/styles';
+@mixin required {
+  content: ' *';
+}
+
+@mixin requiredRed {
+  content: ' *';
+  color: red;
+}
 
 .pri-required:after {
   @include required;
