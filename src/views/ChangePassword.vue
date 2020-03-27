@@ -7,12 +7,12 @@
     <v-form>
       <v-row align="center">
         <v-col cols="12">
-          <PriPassword label="Create a Password" />
+          <PriSSN label="Create a Password" />
         </v-col>
       </v-row>
       <v-row align="center">
         <v-col cols="12">
-          <PriPassword label="Confrim Password" />
+          <PriSSN label="Confrim Password" />
         </v-col>
       </v-row>
     </v-form>
@@ -29,13 +29,13 @@
   </pri-responsive-page-layout>
 </template>
 <script>
-import { PriPassword, PriButton } from '@/shared-components';
+import { PriSSN, PriButton } from '@/shared-components';
 import PriResponsivePageLayout from '@/components/ResponsivePageLayout';
 
 export default {
   name: 'changePassword',
   components: {
-    PriPassword,
+    Priz,
     PriButton,
     PriResponsivePageLayout
   },

@@ -2,7 +2,7 @@
   <v-app id="inspire">
     <AppBar />
     <v-content>
-      <v-container fluid>
+      <v-container class="reg-container" fluid>
         <router-view :key="$route.fullPath" />
       </v-container>
     </v-content>
@@ -20,6 +20,11 @@ export default {
 };
 </script>
 <style lang="scss">
+#inspire {
+  .v-application--wrap {
+    min-height: 100%;
+  }
+}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

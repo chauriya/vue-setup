@@ -8,11 +8,13 @@
       :value="formattedValue"
       @blur="isFocused = false"
       @click:append="openDialog"
-      @focus="isFocused = true"
+      @focus="
+        isFocused = true;
+        openDialog();
+      "
       @input="onInput"
       @keypress="onlyNumericPlus($event, '/')"
       @paste.prevent
-      append-icon="mdi-calendar"
       ref="iconTarget"
     >
       <template v-slot:label>
