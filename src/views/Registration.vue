@@ -37,11 +37,11 @@
     </v-form>
     <template v-slot:bottom>
       <v-row>
-        <v-col cols="12" sm="6">
-          <PriButton>Cancel</PriButton>
+        <v-col cols="12" sm="6" class="nxtBtn">
+          <PriButton disabled>Next</PriButton>
         </v-col>
-        <v-col cols="12" sm="6">
-          <PriButton>Next</PriButton>
+        <v-col cols="12" sm="6" class="cancelBtn">
+          <PriButton>Cancel</PriButton>
         </v-col>
       </v-row>
     </template>
@@ -85,5 +85,25 @@ export default {
 }
 .layout {
   display: contents !important;
+}
+.cancelBtn {
+  text-align: start;
+}
+.nxtBtn {
+  text-align: end;
+}
+@media (max-width: 400px) {
+  .cancelBtn {
+    text-align: center;
+  }
+  .nxtBtn {
+    text-align: center;
+  }
+  .v-application .primary--text[data-v-6106551a] {
+    width: inherit !important;
+  }
+  .theme--light.v-btn.v-btn--disabled {
+    width: inherit !important;
+  }
 }
 </style>
