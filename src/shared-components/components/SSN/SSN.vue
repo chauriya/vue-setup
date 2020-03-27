@@ -16,6 +16,7 @@
       @keypress="onlyNumericPlus($event, '-')"
       @paste.prevent
       ref="iconTarget"
+      label=""
     >
       <template v-slot:label>
         <span
@@ -86,7 +87,7 @@ export default {
   ],
   data: () => ({
     maxLength: 11,
-    type: 'password',
+    type: 'text',
     isFocused: false,
     invalidTextOne: 'COMP_SSN_INVALID',
     invalidTextTwo: 'COMP_SIN_INVALID'

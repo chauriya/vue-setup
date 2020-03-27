@@ -3,11 +3,11 @@
     <!-- page-level-errors="vm.transitionInfo.pageLevelErrors" -->
     <v-layout text-center wrap>
       <h2 class="headline mb-3">Welcome to Premerica Online Registration</h2>
-      <h3 class="mb-3">
-        Please enter the following personal information so that we can identify
-        you.
-      </h3>
     </v-layout>
+    <h3 class="mb-3">
+      Please enter the following personal information so that we can identify
+      you.
+    </h3>
     <v-form>
       <v-row align="center">
         <v-col cols="12">
@@ -58,7 +58,7 @@ import {
 import PriResponsivePageLayout from '@/components/ResponsivePageLayout';
 
 export default {
-  name: 'BeneficiaryInfo',
+  name: 'Registration',
   components: {
     PriButton,
     PriEmail,
@@ -67,18 +67,9 @@ export default {
     PriPolicyNumber,
     PriResponsivePageLayout
   },
-  props: {
-    lifeApp: {
-      required: true
-    },
-    global: {
-      required: true
-    }
-  },
   data() {
     return {
-      beneficiary: {},
-      disableAllocation: false
+      registration: {}
     };
   },
   methods: {},
@@ -91,5 +82,8 @@ export default {
   color: darkblue !important;
   caret-color: darkblue !important;
   border-radius: 3px;
+}
+.layout {
+  display: contents !important;
 }
 </style>

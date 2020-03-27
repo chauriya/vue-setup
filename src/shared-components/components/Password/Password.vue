@@ -13,7 +13,7 @@
       @click:append="toggleType"
       @focus="isFocused = true"
       @input="onInput"
-      @keypress="onlyNumericPlus($event, '-')"
+      @keypress="onlyAlphaNumericPlus($event, ' ')"
       @paste.prevent
       ref="iconTarget"
     >
