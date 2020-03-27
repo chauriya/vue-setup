@@ -99,7 +99,7 @@ export default {
   .nxtBtn {
     text-align: center;
   }
-  .v-application .primary--text[data-v-6106551a] {
+  .v-application .primary--text {
     width: inherit !important;
   }
   .theme--light.v-btn.v-btn--disabled {
