@@ -1,55 +1,67 @@
 <template>
-  <v-app id="changepassword">
-    <AppBar />
-    <v-container class="grey lighten-5">
-      <div>
-        <p class="headline text-center">Set up your password to continue</p>
-      </div>
-      <PriBaseTextField componentName="Create a new password" />
-      <PriBaseTextField componentName="Confrim password" />
-      <div class="text-center">
-        <v-btn class="ma-2" outlined color="indigo">Cancel</v-btn>
-        <v-btn class="ma-2 btnTypeOne">Next</v-btn>
-      </div>
-      <div>
-        <p class="caption text-center font-weight-bold" style="color:darkblue">
-          To avoid disconnection update billing information upon login
-        </p>
-      </div>
-    </v-container>
-  </v-app>
+  <pri-responsive-page-layout :title="ChangePassword" title-accent="primary">
+    <!-- page-level-errors="vm.transitionInfo.pageLevelErrors" -->
+    <v-layout text-center wrap>
+      <h2 class="headline mb-3">Set up your new password to contiue</h2>
+    </v-layout>
+    <v-form>
+      <v-row align="center">
+        <v-col cols="12">
+          <PriPassword label="Create a Password" />
+        </v-col>
+      </v-row>
+      <v-row align="center">
+        <v-col cols="12">
+          <PriPassword label="Confrim Password" />
+        </v-col>
+      </v-row>
+    </v-form>
+    <template v-slot:bottom>
+      <v-row>
+        <v-col cols="12" sm="6">
+          <PriButton>Submit</PriButton>
+        </v-col>
+        <v-col cols="12" sm="6">
+          <PriButton>Cancel</PriButton>
+        </v-col>
+      </v-row>
+    </template>
+  </pri-responsive-page-layout>
 </template>
 <script>
-import PriBaseTextField from '../shared-components/BaseTextField';
-import { loadLanguageAsync } from '@/plugins/i18n';
-import { mapState } from 'vuex';
+import { PriPassword, PriButton } from '@/shared-components';
+import PriResponsivePageLayout from '@/components/ResponsivePageLayout';
+
 export default {
-  name: 'Registration',
+  name: 'changePassword',
   components: {
-    PriBaseTextField
+    PriPassword,
+    PriButton,
+    PriResponsivePageLayout
   },
-  data: () => ({
-    languagesTitle: 'Languages',
-    twoCharacterLanguageCode: 'EN'
-  }),
-  created() {
-    this.setLocale();
-  },
-  computed: { ...mapState('ui', ['sectionTitle']) },
-  methods: {
-    // default setup for languages
-    setLocale(locale = 'en-US') {
-      void loadLanguageAsync(locale).then(() => {
-        this.languagesTitle = this.$t('L_PRE_EN');
-        this.twoCharacterLanguageCode = 'EN';
-      });
+  props: {
+    lifeApp: {
+      required: true
+    },
+    global: {
+      required: true
     }
-  }
+  },
+  data() {
+    return {
+      beneficiary: {},
+      disableAllocation: false
+    };
+  },
+  methods: {},
+  computed: {},
+  watch: {}
 };
 </script>
 <style scoped>
-.btnTypeOne {
-  background-color: darkblue !important;
-  color: white !important;
+.v-application .primary--text {
+  color: darkblue !important;
+  caret-color: darkblue !important;
+  border-radius: 3px;
 }
 </style>

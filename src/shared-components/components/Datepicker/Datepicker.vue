@@ -21,13 +21,18 @@
             'pri-required': isRequired,
             'pri-required-red': !co_isDisabled
           }"
-          >{{ co_label }}</span
         >
+          {{ co_label }}
+        </span>
       </template>
       <template v-if="info" v-slot:prepend-inner>
-        <v-icon :disabled="co_isDisabled" @click.stop="onInfoClick" color="blue"
-          >mdi-information</v-icon
+        <v-icon
+          :disabled="co_isDisabled"
+          @click.stop="onInfoClick"
+          color="blue"
         >
+          mdi-information
+        </v-icon>
       </template>
     </v-text-field>
     <v-dialog ref="dialog" v-model="dialog" width="290px">
@@ -54,8 +59,8 @@ import {
   KeypressMixin,
   MaskMixin,
   ValidationsMixin
-} from './mixins';
-import PriDialog from './components/Dialog/Dialog';
+} from '../../mixins';
+import PriDialog from '../../components/Dialog/Dialog';
 import _ from 'lodash';
 
 export default {
@@ -268,7 +273,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import './styles/styles';
+@import '../../styles/styles';
+
 .pri-required:after {
   @include required;
 }

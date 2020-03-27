@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600&display=swap');
+
+.v-application {
+  font-family: 'Open Sans', sans-serif !important;
+  background: var(--v-white-base) !important;
+}
+
+.v-application * {
+  font-family: 'Open Sans', sans-serif !important;
+}
+
+.v-application {
+  [class*="display"], .headline, .title, [class*="subtitle"], [class*="body"], .caption, .overline {
+    font-family: 'Open Sans', sans-serif !important;
+  }
+
+  .title, .subtitle-2 {
+    font-weight: 600;
+  }
+}
+
+.v-dialog {
+  border-radius: 0 !important;
+}

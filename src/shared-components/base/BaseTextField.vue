@@ -11,20 +11,23 @@
             'pri-required': isRequired,
             'pri-required-red': !co_isDisabled
           }"
-          >{{ componentName }}</span
         >
+          {{ co_componentName }}
+        </span>
       </template>
       <template v-if="info" v-slot:prepend-inner>
-        <v-icon :disabled="co_isDisabled" @click.stop="onInfoClick" color="blue"
-          >mdi-information</v-icon
+        <v-icon
+          :disabled="co_isDisabled"
+          @click.stop="onInfoClick"
+          color="blue"
         >
+          mdi-information
+        </v-icon>
       </template>
       <template v-if="shouldShowIcon" v-slot:append>
-        <v-icon
-          :color="co_checkMarkAlertIconsColor"
-          :disabled="co_isDisabled"
-          >{{ co_validationIcon }}</v-icon
-        >
+        <v-icon :color="co_checkMarkAlertIconsColor" :disabled="co_isDisabled">
+          {{ co_validationIcon }}
+        </v-icon>
       </template>
     </v-text-field>
     <PriDialog :content="co_info_content" v-model="open" />
@@ -38,8 +41,8 @@ import {
   KeypressMixin,
   MaskMixin,
   ValidationsMixin
-} from './mixins';
-import PriDialog from './components/Dialog/';
+} from '../mixins';
+import PriDialog from '../components/Dialog/Dialog';
 
 export default {
   name: 'pri-base-text-field',
@@ -51,11 +54,8 @@ export default {
     IconMixin,
     MaskMixin
   ],
-  props: {
-    componentName: String
-  },
   data: () => ({
-    //componentName: 'Base Text Field'
+    componentName: 'Base Text Field'
   }),
   methods: {
     allowCharsFunction() {
@@ -100,7 +100,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import './styles/styles';
+@import '../styles/styles';
 
 .pri-required:after {
   @include required;
