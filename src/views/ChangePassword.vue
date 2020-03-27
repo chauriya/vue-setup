@@ -35,7 +35,7 @@ import PriResponsivePageLayout from '@/components/ResponsivePageLayout';
 export default {
   name: 'changePassword',
   components: {
-    Priz,
+    PriSSN,
     PriButton,
     PriResponsivePageLayout
   },
