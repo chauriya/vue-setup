@@ -3,5 +3,20 @@
   "POL_HEADER_REGISTRATION": "Welcome to Premerica Online Registration",
   "POL_REGISTRATION_INFO": "Please enter the following personal information so that we can identify you.",
   "POL_CANCEL": "Cancel",
-  "POL_NEXT": "Next"
+  "POL_NEXT": "Next",
+
+  "POL_USERID":"Rep ID/User ID",
+  "POL_SSN": "SSN/SIN",
+  "POL_DOB": "Date of Birth",
+  "POL_EMAIL": "Email",
+  "POL_NON_PRI_EMAIL": "Non-Premerica Email Address",
+  "POL_CONFIRM_EMAIL": "Confrim Email Address",
+
+  "POL_REQUIRED": "Required",
+  "POL_USERID_INVALID": "Invalid Rep ID/User ID",
+  "POL_SSN_INVALID": "Invalid SSN",
+  "POL_SIN_INVALID": "Invalid SIN",
+  "POL_INVALID_DATE": "Invalid Date",
+  "POL_INVALID_DATE_RANGE": "Invalid date Range",
+  "POL_EMAIL_INVALID": "Invalid Email"
 }

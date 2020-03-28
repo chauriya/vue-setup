@@ -72,8 +72,8 @@ export default {
     dialog: false,
     maxLength: 10,
     isFocused: false,
-    invalidTextOne: 'COMP_INVALID_DATE',
-    invalidTextTwo: 'COMP_INVALID_DATE_RANGE',
+    invalidTextOne: 'POL_INVALID_DATE',
+    invalidTextTwo: 'POL_INVALID_DATE_RANGE',
     tValue: '',
     formattedValue: ''
   }),
@@ -98,12 +98,7 @@ export default {
   computed: {
     co_label() {
       if (this.label) return this.$t(this.label);
-      let toTranslate = '';
-      if (this.format === 'dob') {
-        toTranslate = 'COMP_DATE_OF_BIRTH';
-      } else {
-        toTranslate = 'COMP_DATEPICKER';
-      }
+      let toTranslate = 'POL_DOB';
       return this.$t(toTranslate);
     },
     co_value() {

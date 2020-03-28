@@ -9,30 +9,33 @@
     <h3 class="mb-3">
       {{ $t('POL_REGISTRATION_INFO') }}
     </h3>
-    <v-form>
+    <v-form ref="registrationFrm">
       <v-row align="center">
         <v-col cols="12">
-          <PriPolicyNumber :label="$t('POL_USERID')" />
+          <PriRegNumber v-model="reg.userid" required />
         </v-col>
       </v-row>
       <v-row align="center">
         <v-col cols="12">
-          <PriSSN :label="$t('POL_SSN')" />
+          <PriSSN v-model="reg.ssn" />
         </v-col>
       </v-row>
       <v-row align="center">
         <v-col cols="12">
-          <PriDatepicker :label="$t('POL_DOB')" />
+          <PriDatepicker v-model="reg.dob" :label="$t('POL_DOB')" />
         </v-col>
       </v-row>
       <v-row align="center">
         <v-col cols="12">
-          <PriEmail :label="$t('POL_NON_PRI_EMAIL')" />
+          <PriEmail v-model="reg.email" :label="$t('POL_NON_PRI_EMAIL')" />
         </v-col>
       </v-row>
       <v-row align="center">
         <v-col cols="12">
-          <PriEmail :label="$t('POL_CONFIRM_EMAIL')" />
+          <PriEmail
+            v-model="reg.confirmemail"
+            :label="$t('POL_CONFIRM_EMAIL')"
+          />
         </v-col>
       </v-row>
     </v-form>
@@ -42,7 +45,7 @@
           <!-- class="nxtBtn" -->
           <PriButton
             name="cancelButton"
-            @click.native="onNextButtonClick"
+            @click.native="onCancelButtonClick"
             block
           >
             {{ $t('POL_CANCEL') }}
@@ -51,8 +54,9 @@
         <v-col cols="12" sm="6">
           <!-- class="cancelBtn" -->
           <PriButton
+            max-width="20"
             name="nextButton"
-            @click.native="onSaveButtonClick"
+            @click.native="onNextButtonClick"
             block
             primary
           >
@@ -68,23 +72,36 @@ import {
   PriButton,
   PriEmail,
   PriSSN,
-  PriPolicyNumber,
+  PriRegNumber,
   PriDatepicker
 } from '@/shared-components';
 import PriResponsivePageLayout from '@/components/ResponsivePageLayout';
 
 export default {
-  name: 'Registration',
+  name: 'registration',
   components: {
     PriButton,
     PriEmail,
     PriDatepicker,
     PriSSN,
-    PriPolicyNumber,
+    PriRegNumber,
     PriResponsivePageLayout
   },
-  methods: {},
-  computed: {},
+  data: () => ({
+    reg: {}
+  }),
+  methods: {
+    onCancelButtonClick() {
+      this.$router.go(-1);
+    },
+    onNextButtonClick() {
+      console.log(this.$refs.registrationFrm.validate());
+      /* if (this.$refs.registrationFrm.validate()) {
+        return true;
+      } */
+      return false;
+    }
+  },
   watch: {}
 };
 </script>

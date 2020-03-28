@@ -2,11 +2,11 @@
 import PriBaseTextField from '../../base/BaseTextField';
 
 export default {
-  name: 'pri-policy-number',
+  name: 'pri-reg-number',
   extends: PriBaseTextField,
   data: () => ({
-    componentName: 'COMP_POLICY_NUMBER',
-    invalidTextOne: 'COMP_POLICY_NUMBER_INVALID',
+    componentName: 'POL_USERID',
+    invalidTextOne: 'POL_USERID_INVALID',
     maxLength: 10
   }),
   methods: {
@@ -21,7 +21,7 @@ export default {
       };
     },
     validations() {
-      const policyNumberValidations = [
+      const repNumberValidations = [
         str => {
           if (!str) return true;
           return (
@@ -32,8 +32,8 @@ export default {
       ];
 
       return this.isRequired
-        ? [this.isRequiredValidation, ...policyNumberValidations]
-        : policyNumberValidations;
+        ? [this.isRequiredValidation, ...repNumberValidations]
+        : repNumberValidations;
     }
   }
 };

@@ -1,11 +1,3 @@
-const languages = ['en-US'];
-const loadedLangs = languages.map(key => {
-  return {
-    [key]: require(`../locale/${key}.json`)
-  };
-});
-const messages = Object.assign({}, ...loadedLangs);
-
 import _ from 'lodash';
 
 export const ComponentDefaultsMixin = {
@@ -15,7 +7,6 @@ export const ComponentDefaultsMixin = {
     invalidTextThree: 'invalidTextThree',
     open: false
   }),
-  i18n: { messages },
   props: ['value', 'label', 'disabled', 'info'],
   methods: {
     onInfoClick() {

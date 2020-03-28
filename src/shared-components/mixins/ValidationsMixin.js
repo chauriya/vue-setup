@@ -14,7 +14,7 @@ export const ValidationsMixin = {
       }
     },
     isRequiredValidation(v) {
-      return this.hasValue(v) ? true : this.$t('COMP_REQUIRED');
+      return this.hasValue(v) ? true : this.$t('POL_REQUIRED');
     }
   }
 };
