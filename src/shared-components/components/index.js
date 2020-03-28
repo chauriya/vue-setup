@@ -5,3 +5,6 @@ export * from './SSN';
 export * from './Button';
 export * from './PolicyNumber';
 export * from './Password';
+export * from './ConfirmPassword';
+export * from './Phone';
+export * from './Boolean';
