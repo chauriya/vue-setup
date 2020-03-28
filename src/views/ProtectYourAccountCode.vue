@@ -4,29 +4,27 @@
     <v-layout text-center wrap>
       <h2 class="headline mb-3">{{ $t('POL_ACC_CODE') }}</h2>
     </v-layout>
-    <h3 class="mb-3">{{ $t('VERIFICATION_METHOD') }}</h3>
+    <h3 class="mb-3">{{ $t('POL_ACC_CODE_SUB_HEADER') }}</h3>
     <v-form>
       <v-row align="center">
         <v-col cols="12">
-          <PriBoolean
-            :label="$t('EMAIL_TO')"
-            :no-radio-label="false"
-            labelForFalse="Abc@gmail.com"
-            labelForTrue="xyz@gmail.com"
-          />
+          <PriCode label="Code" />
         </v-col>
       </v-row>
-      <v-row align="center">
-        <v-col cols="12">
-          <PriBoolean
-            :label="$t('TEXT_TO')"
-            :no-radio-label="false"
-            labelForTrue="(123) 987 - 8765"
-          />
-          <span>{{ $t('RATE_TEXT') }}</span>
-        </v-col>
-      </v-row>
-      <h3 class="mb-3">{{ $t('SAVE_INFO') }}</h3>
+      <h3 class="mb-3">
+        {{ $t('NOT_RECEVICE_CODE') }}
+        <v-link>{{ $t('RESEND_CODE') }}</v-link>
+      </h3>
+      <h3 class="mb-3">{{ $t('CODE_TIME') }}</h3>
+      <h3 class="mb-3">
+        {{ $t('YOU_CAN_TRY') }}
+        <a href="#">{{ $t('OTHER_VERIFICATION') }}</a>
+        {{ $t('TECH_SUPPORT') }}
+        <a href="#">{{ $t('TECH_SUPPORT_NO') }}</a>
+      </h3>
+      <h3 class="mb-3">
+        <v-checkbox :label="$t('TRUST_LABEL')"></v-checkbox>
+      </h3>
     </v-form>
     <template v-slot:bottom>
       <v-row>
@@ -41,14 +39,14 @@
   </pri-responsive-page-layout>
 </template>
 <script>
-import { PriBoolean, PriButton } from '@/shared-components';
+import { PriCode, PriButton } from '@/shared-components';
 import PriResponsivePageLayout from '@/components/ResponsivePageLayout';
 
 export default {
   name: 'Registration',
   components: {
     PriButton,
-    PriBoolean,
+    PriCode,
     PriResponsivePageLayout
   },
   data() {

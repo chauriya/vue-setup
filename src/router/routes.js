@@ -5,6 +5,8 @@ const ChangePassword = () => import('@/views/ChangePassword.vue');
 const VerifyDetails = () => import('@/views/VerifyDetails.vue');
 const ContactInfromation = () => import('@/views/ContactInfromation.vue');
 const ProtectYourAccount = () => import('@/views/ProtectYourAccount.vue');
+const ProtectYourAccountCode = () =>
+  import('@/views/ProtectYourAccountCode.vue');
 
 const routes = [
   {
@@ -30,6 +32,11 @@ const routes = [
   {
     path: '/protectyouraccount',
     component: ProtectYourAccount,
+    name: STATES.NAME.VERIFY_DETAILS
+  },
+  {
+    path: '/protectyouraccountcode',
+    component: ProtectYourAccountCode,
     name: STATES.NAME.VERIFY_DETAILS
   } /* ,
   {

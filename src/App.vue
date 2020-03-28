@@ -1,6 +1,7 @@
 <template>
   <v-app id="inspire">
     <AppBar />
+    <Footer />
     <v-content>
       <v-container class="reg-container" fluid>
         <router-view :key="$route.fullPath" />
@@ -11,11 +12,12 @@
 
 <script>
 import AppBar from '@/components/AppBar';
-
+import Footer from '@/components/AppBar';
 export default {
   name: 'App',
   components: {
-    AppBar
+    AppBar,
+    Footer
   }
 };
 </script>

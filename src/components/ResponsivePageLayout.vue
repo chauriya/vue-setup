@@ -1,13 +1,6 @@
 <template>
   <v-row class="responsive-page-layout">
     <v-col class="d-flex flex-column">
-      <!-- <section class="responsive-header">
-        <h1
-          :class="co_titleAccent"
-          class="text-center display-1"
-          v-text="title"
-        />
-      </section> -->
       <section class="responsive-body">
         <v-col cols="12">
           <slot name="default" />

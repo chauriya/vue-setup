@@ -8,3 +8,4 @@ export * from './Password';
 export * from './ConfirmPassword';
 export * from './Phone';
 export * from './Boolean';
+export * from './Code';

@@ -2,7 +2,7 @@
   <pri-responsive-page-layout :title="ChangePassword" title-accent="primary">
     <!-- page-level-errors="vm.transitionInfo.pageLevelErrors" -->
     <v-layout text-center wrap>
-      <h2 class="headline mb-3">Set up your new password to contiue</h2>
+      <h2 class="headline mb-3">{{ $t('SETUP_EMAIL_HEADER') }}</h2>
     </v-layout>
     <v-form>
       <v-row align="center">

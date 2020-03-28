@@ -2,12 +2,12 @@
   <pri-responsive-page-layout :title="Registration" title-accent="primary">
     <!-- page-level-errors="vm.transitionInfo.pageLevelErrors" -->
     <v-layout text-center wrap>
-      <h2 class="headline mb-3">Premeric Email Address</h2>
+      <h2 class="headline mb-3">{{ $t('EMAIL_POL') }}</h2>
     </v-layout>
     <v-form>
       <v-row align="center">
         <v-col cols="12">
-          <h4>Select your Premerica Business email</h4>
+          <h4>{{ $t('SELECT_EMAIL') }}</h4>
         </v-col>
       </v-row>
       <v-row align="center">
@@ -17,7 +17,7 @@
       </v-row>
       <v-row align="center">
         <v-col cols="12">
-          <h4>Non-Premerica Email address</h4>
+          <h4>{{ $t('EMAIL_NON_POL') }}</h4>
         </v-col>
       </v-row>
       <v-row align="center">
@@ -27,14 +27,13 @@
       </v-row>
       <v-row align="center">
         <v-col cols="12">
-          <h4>Mobile Phone Number</h4>
+          <h4>{{ $t('POL_MOBILE') }}</h4>
         </v-col>
       </v-row>
       <v-row align="center">
         <v-col cols="12">
           <h4>
-            The above information will be used for Premerica-related
-            communication, including two-factor authentication.
+            {{ $t('AUTH_INFO_TEXT') }}
           </h4>
         </v-col>
       </v-row>
