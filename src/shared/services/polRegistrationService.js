@@ -1,5 +1,3 @@
-
-
 // TODO: Axios implementation here
 
 /*import { apolloClient } from '@/plugins/apollo';
@@ -56,4 +54,4 @@ export const saveLifeSection = async ({ variables }) => {
     .then(response => {
       return response.data.saveLifeSection;
     });
-};*//
+};*/
