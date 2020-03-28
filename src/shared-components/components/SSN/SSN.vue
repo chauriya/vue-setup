@@ -74,8 +74,7 @@ export default {
   components: { PriDialog },
   props: {
     format: {
-      type: String,
-      default: 'ssn'
+      type: String
     }
   },
   mixins: [
@@ -120,9 +119,7 @@ export default {
       return this.type === 'text' ? 'mdi-eye-off' : 'mdi-eye';
     },
     co_componentName() {
-      return this.format === 'ssn'
-        ? this.$t('L_PRI_SSN')
-        : this.$t('L_PRI_SIN');
+      return !this.format ? this.$t('POL_SSN') : this.format;
     },
     getInvalidText() {
       return this.format === 'ssn'

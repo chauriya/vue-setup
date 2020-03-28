@@ -6,17 +6,17 @@ const VerifyDetails = () => import('@/views/VerifyDetails.vue');
 
 const routes = [
   {
-    path: '/registration',
+    path: '/',
     component: Registration,
     name: STATES.NAME.REGISTRATION
   },
   {
-    path: '/registration/changePassword',
+    path: '/changePassword',
     component: ChangePassword,
     name: STATES.NAME.CHANGE_PASSWORD
   },
   {
-    path: '/registration/verifyDetails',
+    path: '/verifyDetails',
     component: VerifyDetails,
     name: STATES.NAME.VERIFY_DETAILS
   } /* ,

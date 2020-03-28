@@ -1,4 +1,4 @@
-const languages = ['en-US', 'es-US', 'fr-CA'];
+const languages = ['en-US'];
 const loadedLangs = languages.map(key => {
   return {
     [key]: require(`../locale/${key}.json`)
