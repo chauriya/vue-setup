@@ -8,17 +8,17 @@ const ProtectYourAccount = () => import('@/views/ProtectYourAccount.vue');
 
 const routes = [
   {
-    path: '/',
+    path: '/registration',
     component: Registration,
     name: STATES.NAME.REGISTRATION
   },
   {
-    path: '/changePassword',
+    path: '/registration/changePassword',
     component: ChangePassword,
     name: STATES.NAME.CHANGE_PASSWORD
   },
   {
-    path: '/verifyDetails',
+    path: '/registration/verifyDetails',
     component: VerifyDetails,
     name: STATES.NAME.VERIFY_DETAILS
   },

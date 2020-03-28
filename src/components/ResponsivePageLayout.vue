@@ -1,13 +1,13 @@
 <template>
   <v-row class="responsive-page-layout">
     <v-col class="d-flex flex-column">
-      <section class="responsive-header">
+      <!-- <section class="responsive-header">
         <h1
           :class="co_titleAccent"
           class="text-center display-1"
           v-text="title"
         />
-      </section>
+      </section> -->
       <section class="responsive-body">
         <v-col cols="12">
           <slot name="default" />
@@ -25,9 +25,6 @@
 export default {
   name: 'pri-responsive-page-layout',
   props: {
-    title: {
-      type: String
-    },
     titleAccent: {
       type: String
     }

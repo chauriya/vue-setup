@@ -4,7 +4,7 @@
       <v-icon>mdi-arrow-left</v-icon>
     </v-btn>
     <v-spacer></v-spacer>
-    <h1 class="text-center">{{ $t(sectionTitle) }}</h1>
+    <h1>{{ $t(sectionTitle) }}</h1>
     <v-spacer></v-spacer>
   </v-app-bar>
 </template>
@@ -30,7 +30,7 @@ export default {
     // default setup for languages
     setLocale(locale = 'en-US') {
       void loadLanguageAsync(locale).then(() => {
-        this.languagesTitle = this.$t('L_PRE_EN');
+        this.languagesTitle = this.$t('POL_EN');
         this.twoCharacterLanguageCode = 'EN';
       });
     }

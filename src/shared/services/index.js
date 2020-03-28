@@ -1,2 +1,1 @@
-export * from './signatureDisclosures';
-export * from './lifeAppBff';
+export * from './polRegistrationService';
