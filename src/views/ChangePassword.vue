@@ -1,5 +1,5 @@
 <template>
-  <pri-responsive-page-layout :title="ChangePassword" title-accent="primary">
+  <pri-responsive-page-layout>
     <!-- page-level-errors="vm.transitionInfo.pageLevelErrors" -->
     <v-layout text-center wrap>
       <h2 class="headline mb-3">{{ $t('SETUP_EMAIL_HEADER') }}</h2>
@@ -19,10 +19,26 @@
     <template v-slot:bottom>
       <v-row>
         <v-col cols="12" sm="6">
-          <PriButton disabled>Submit</PriButton>
+          <!-- class="nxtBtn" -->
+          <PriButton
+            name="cancelButton"
+            @click.native="onCancelButtonClick"
+            block
+          >
+            {{ $t('POL_CANCEL') }}
+          </PriButton>
         </v-col>
         <v-col cols="12" sm="6">
-          <PriButton>Cancel</PriButton>
+          <!-- class="cancelBtn" -->
+          <PriButton
+            max-width="20"
+            name="nextButton"
+            @click.native="onNextButtonClick"
+            block
+            primary
+          >
+            {{ $t('POL_NEXT') }}
+          </PriButton>
         </v-col>
       </v-row>
     </template>
@@ -47,7 +63,17 @@ export default {
   data() {
     return {};
   },
-  methods: {},
+  methods: {
+    onCancelButtonClick() {
+      this.$router.go(-1);
+    },
+    onNextButtonClick() {
+      //console.log(this.$refs.registrationFrm.validate());
+      this.$router.push({
+        name: 'verifyDetails'
+      });
+    }
+  },
   computed: {},
   watch: {}
 };

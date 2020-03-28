@@ -92,14 +92,13 @@ export default {
   }),
   methods: {
     onCancelButtonClick() {
-      this.$router.go(-1);
+      return false;
     },
     onNextButtonClick() {
-      console.log(this.$refs.registrationFrm.validate());
-      /* if (this.$refs.registrationFrm.validate()) {
-        return true;
-      } */
-      return false;
+      //console.log(this.$refs.registrationFrm.validate());
+      this.$router.push({
+        name: 'verifyDetails'
+      });
     }
   },
   watch: {}

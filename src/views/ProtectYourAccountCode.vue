@@ -1,5 +1,5 @@
 <template>
-  <pri-responsive-page-layout :title="Registration" title-accent="primary">
+  <pri-responsive-page-layout>
     <!-- page-level-errors="vm.transitionInfo.pageLevelErrors" -->
     <v-layout text-center wrap>
       <h2 class="headline mb-3">{{ $t('POL_ACC_CODE') }}</h2>
@@ -13,7 +13,7 @@
       </v-row>
       <h3 class="mb-3">
         {{ $t('NOT_RECEVICE_CODE') }}
-        <v-link>{{ $t('RESEND_CODE') }}</v-link>
+        <a>{{ $t('RESEND_CODE') }}</a>
       </h3>
       <h3 class="mb-3">{{ $t('CODE_TIME') }}</h3>
       <h3 class="mb-3">
@@ -28,11 +28,27 @@
     </v-form>
     <template v-slot:bottom>
       <v-row>
-        <v-col cols="12" sm="6" class="nxtBtn">
-          <PriButton disabled>Next</PriButton>
+        <v-col cols="12" sm="6">
+          <!-- class="nxtBtn" -->
+          <PriButton
+            name="cancelButton"
+            @click.native="onCancelButtonClick"
+            block
+          >
+            {{ $t('POL_CANCEL') }}
+          </PriButton>
         </v-col>
-        <v-col cols="12" sm="6" class="cancelBtn">
-          <PriButton>Cancel</PriButton>
+        <v-col cols="12" sm="6">
+          <!-- class="cancelBtn" -->
+          <PriButton
+            max-width="20"
+            name="nextButton"
+            @click.native="onNextButtonClick"
+            block
+            primary
+          >
+            {{ $t('POL_NEXT') }}
+          </PriButton>
         </v-col>
       </v-row>
     </template>
@@ -54,7 +70,17 @@ export default {
       registration: {}
     };
   },
-  methods: {},
+  methods: {
+    onCancelButtonClick() {
+      this.$router.go(-1);
+    },
+    onNextButtonClick() {
+      //console.log(this.$refs.registrationFrm.validate());
+      /* this.$router.push({
+        name: 'verifyDetails'
+      }); */
+    }
+  },
   computed: {},
   watch: {}
 };

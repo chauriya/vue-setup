@@ -1,5 +1,5 @@
 <template>
-  <pri-responsive-page-layout :title="viewDetails" title-accent="primary">
+  <pri-responsive-page-layout>
     <!-- page-level-errors="vm.transitionInfo.pageLevelErrors" -->
     <v-row align="center">
       <v-col cols="12">
@@ -48,11 +48,27 @@
     </v-row>
     <template v-slot:bottom>
       <v-row>
-        <v-col cols="12" sm="6" class="nxtBtn">
-          <PriButton disabled>Next</PriButton>
+        <v-col cols="12" sm="6">
+          <!-- class="nxtBtn" -->
+          <PriButton
+            name="cancelButton"
+            @click.native="onCancelButtonClick"
+            block
+          >
+            {{ $t('POL_CANCEL') }}
+          </PriButton>
         </v-col>
-        <v-col cols="12" sm="6" class="cancelBtn">
-          <PriButton>Cancel</PriButton>
+        <v-col cols="12" sm="6">
+          <!-- class="cancelBtn" -->
+          <PriButton
+            max-width="20"
+            name="nextButton"
+            @click.native="onNextButtonClick"
+            block
+            primary
+          >
+            {{ $t('POL_NEXT') }}
+          </PriButton>
         </v-col>
       </v-row>
     </template>
@@ -68,10 +84,16 @@ export default {
     PriButton,
     PriResponsivePageLayout
   },
-  data() {
-    return {
-      //registration: {}
-    };
+  methods: {
+    onCancelButtonClick() {
+      this.$router.go(-1);
+    },
+    onNextButtonClick() {
+      //console.log(this.$refs.registrationFrm.validate());
+      this.$router.push({
+        name: 'contactInforamtion'
+      });
+    }
   }
 };
 </script>

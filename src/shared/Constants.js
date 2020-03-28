@@ -7,7 +7,10 @@ const STATES = {
   NAME: {
     REGISTRATION: 'registration',
     CHANGE_PASSWORD: 'ChangePassword',
-    VERIFY_DETAILS: 'verifyDetails'
+    VERIFY_DETAILS: 'verifyDetails',
+    Contact_Infromation: 'contactInforamtion',
+    Protect_Your_Account: 'protectYourAccount',
+    Protect_Your_Account_Code: 'protectYourAccountCode'
   }
 };
 

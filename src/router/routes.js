@@ -27,17 +27,17 @@ const routes = [
   {
     path: '/contactInforamtion',
     component: ContactInfromation,
-    name: STATES.NAME.VERIFY_DETAILS
+    name: STATES.NAME.Contact_Infromation
   },
   {
-    path: '/protectyouraccount',
+    path: '/protectYourAccount',
     component: ProtectYourAccount,
-    name: STATES.NAME.VERIFY_DETAILS
+    name: STATES.NAME.Protect_Your_Account
   },
   {
-    path: '/protectyouraccountcode',
+    path: '/protectYourAccountCode',
     component: ProtectYourAccountCode,
-    name: STATES.NAME.VERIFY_DETAILS
+    name: STATES.NAME.Protect_Your_Account_Code
   } /* ,
   {
     path: '/notFound',
