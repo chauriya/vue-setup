@@ -5,8 +5,8 @@ export default {
   name: 'pri-email',
   extends: PriBaseTextField,
   data: () => ({
-    componentName: 'L_PRI_EMAIL',
-    invalidTextOne: 'COMP_EMAIL_INVALID'
+    componentName: 'POL_EMAIL',
+    invalidTextOne: 'POL_EMAIL_INVALID'
   }),
   computed: {
     extraListeners() {

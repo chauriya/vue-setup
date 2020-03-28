@@ -24,5 +24,19 @@
   "EMAIL_NON_POL": "Non-Premerica Email address",
   "AUTH_INFO_TEXT": "The above information will be used for Premerica-related communication, including two-factor authentication.",
   "POL_MOBILE": "Mobile Phone Number",
-  "SETUP_EMAIL_HEADER":"Set up your new password to contiue"
+  "SETUP_EMAIL_HEADER": "Set up your new password to contiue",
+  "POL_USERID": "Rep ID/User ID",
+  "POL_SSN": "SSN/SIN",
+  "POL_DOB": "Date of Birth",
+  "POL_EMAIL": "Email",
+  "POL_NON_PRI_EMAIL": "Non-Premerica Email Address",
+  "POL_CONFIRM_EMAIL": "Confrim Email Address",
+
+  "POL_REQUIRED": "Required",
+  "POL_USERID_INVALID": "Invalid Rep ID/User ID",
+  "POL_SSN_INVALID": "Invalid SSN",
+  "POL_SIN_INVALID": "Invalid SIN",
+  "POL_INVALID_DATE": "Invalid Date",
+  "POL_INVALID_DATE_RANGE": "Invalid date Range",
+  "POL_EMAIL_INVALID": "Invalid Email"
 }

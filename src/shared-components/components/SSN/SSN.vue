@@ -88,8 +88,8 @@ export default {
     maxLength: 11,
     type: 'text',
     isFocused: false,
-    invalidTextOne: 'COMP_SSN_INVALID',
-    invalidTextTwo: 'COMP_SIN_INVALID'
+    invalidTextOne: 'POL_SSN_INVALID',
+    invalidTextTwo: 'POL_SIN_INVALID'
   }),
   methods: {
     toggleType() {
