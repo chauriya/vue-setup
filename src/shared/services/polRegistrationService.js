@@ -1,7 +1,9 @@
-// TODO: Refactor, this is POC
 
-import { apolloClient } from '@/plugins/apollo';
-import { mutations } from '@/graphql';
+
+// TODO: Axios implementation here
+
+/*import { apolloClient } from '@/plugins/apollo';
+import { mutations } from '@/graphql';*/
 
 /*
   Use "separation of concerns" principle for readability and maintainabilitey.
@@ -10,7 +12,7 @@ import { mutations } from '@/graphql';
   We can choose to use apollo (graphql), axios (AJAX/fetch), or any other data service client/api.
   * See (https://vuejsdevelopers.com/2017/08/28/vue-js-ajax-recipes/)
  */
-const removeKeys = async (obj, keys) => {
+/*const removeKeys = async (obj, keys) => {
   for (var prop in obj) {
     if (obj.hasOwnProperty(prop)) {
       switch (typeof obj[prop]) {
@@ -54,4 +56,4 @@ export const saveLifeSection = async ({ variables }) => {
     .then(response => {
       return response.data.saveLifeSection;
     });
-};
+};*//

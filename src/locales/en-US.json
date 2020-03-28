@@ -1,4 +1,7 @@
 {
-  "PRE_EN": "English",
-  "message": "hello i18n !!"
+  "POL_EN": "English",
+  "POL_HEADER_REGISTRATION": "Welcome to Premerica Online Registration",
+  "POL_REGISTRATION_INFO": "Please enter the following personal information so that we can identify you.",
+  "POL_CANCEL": "Cancel",
+  "POL_NEXT": "Next"
 }

@@ -1,47 +1,63 @@
 <template>
-  <pri-responsive-page-layout :title="Registration" title-accent="primary">
+  <pri-responsive-page-layout>
     <!-- page-level-errors="vm.transitionInfo.pageLevelErrors" -->
     <v-layout text-center wrap>
-      <h2 class="headline mb-3">Welcome to Premerica Online Registration</h2>
+      <h2 class="headline mb-3">
+        {{ $t('POL_HEADER_REGISTRATION') }}
+      </h2>
     </v-layout>
     <h3 class="mb-3">
-      Please enter the following personal information so that we can identify
-      you.
+      {{ $t('POL_REGISTRATION_INFO') }}
     </h3>
     <v-form>
       <v-row align="center">
         <v-col cols="12">
-          <PriPolicyNumber label="Rep ID/User ID" />
+          <PriPolicyNumber :label="$t('POL_USERID')" />
         </v-col>
       </v-row>
       <v-row align="center">
         <v-col cols="12">
-          <PriSSN label="SSN/SIN" />
+          <PriSSN :label="$t('POL_SSN')" />
         </v-col>
       </v-row>
       <v-row align="center">
         <v-col cols="12">
-          <PriDatepicker label="Date of Birth " />
+          <PriDatepicker :label="$t('POL_DOB')" />
         </v-col>
       </v-row>
       <v-row align="center">
         <v-col cols="12">
-          <PriEmail label="Non-Premerica Email Address" />
+          <PriEmail :label="$t('POL_NON_PRI_EMAIL')" />
         </v-col>
       </v-row>
       <v-row align="center">
         <v-col cols="12">
-          <PriEmail label="Confrim Email Address" />
+          <PriEmail :label="$t('POL_CONFIRM_EMAIL')" />
         </v-col>
       </v-row>
     </v-form>
     <template v-slot:bottom>
       <v-row>
-        <v-col cols="12" sm="6" class="nxtBtn">
-          <PriButton disabled>Next</PriButton>
+        <v-col cols="12" sm="6">
+          <!-- class="nxtBtn" -->
+          <PriButton
+            name="cancelButton"
+            @click.native="onNextButtonClick"
+            block
+          >
+            {{ $t('POL_CANCEL') }}
+          </PriButton>
         </v-col>
-        <v-col cols="12" sm="6" class="cancelBtn">
-          <PriButton>Cancel</PriButton>
+        <v-col cols="12" sm="6">
+          <!-- class="cancelBtn" -->
+          <PriButton
+            name="nextButton"
+            @click.native="onSaveButtonClick"
+            block
+            primary
+          >
+            {{ $t('POL_NEXT') }}
+          </PriButton>
         </v-col>
       </v-row>
     </template>
@@ -66,11 +82,6 @@ export default {
     PriSSN,
     PriPolicyNumber,
     PriResponsivePageLayout
-  },
-  data() {
-    return {
-      registration: {}
-    };
   },
   methods: {},
   computed: {},
