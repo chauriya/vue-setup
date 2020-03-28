@@ -22,28 +22,35 @@
             'pri-required': isRequired,
             'pri-required-red': !co_isDisabled
           }"
-          >{{ co_componentName }}</span
         >
+          {{ co_componentName }}
+        </span>
       </template>
       <template v-if="info" v-slot:prepend-inner>
-        <v-icon :disabled="co_isDisabled" @click.stop="onInfoClick" color="blue"
-          >mdi-information</v-icon
+        <v-icon
+          :disabled="co_isDisabled"
+          @click.stop="onInfoClick"
+          color="blue"
         >
+          mdi-information
+        </v-icon>
       </template>
       <template v-if="shouldShowIcon" v-slot:append>
         <v-icon
           :color="co_checkMarkAlertIconsColor"
           :disabled="co_isDisabled"
           @click="toggleType"
-          >{{ co_validationIcon }}</v-icon
         >
+          {{ co_validationIcon }}
+        </v-icon>
         <v-icon
           :color="co_actionableIcons"
           :disabled="co_isDisabled"
           @click="toggleType"
           style="cursor: pointer"
-          >{{ co_icon }}</v-icon
         >
+          {{ co_icon }}
+        </v-icon>
       </template>
     </v-text-field>
     <PriDialog :content="co_info_content" v-model="open" />
@@ -111,7 +118,7 @@ export default {
       return this.type === 'text' ? 'mdi-eye-off' : 'mdi-eye';
     },
     co_componentName() {
-      return 'Password';
+      return 'Confrim Password';
     },
     getInvalidText() {
       return this.format === 'ssn'

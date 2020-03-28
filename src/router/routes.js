@@ -3,6 +3,8 @@ import { STATES /* , SYSTEM_VIEWS */ } from '@/shared/Constants';
 const Registration = () => import('@/views/Registration.vue');
 const ChangePassword = () => import('@/views/ChangePassword.vue');
 const VerifyDetails = () => import('@/views/VerifyDetails.vue');
+const ContactInfromation = () => import('@/views/ContactInfromation.vue');
+const ProtectYourAccount = () => import('@/views/ProtectYourAccount.vue');
 
 const routes = [
   {
@@ -18,6 +20,16 @@ const routes = [
   {
     path: '/verifyDetails',
     component: VerifyDetails,
+    name: STATES.NAME.VERIFY_DETAILS
+  },
+  {
+    path: '/contactInforamtion',
+    component: ContactInfromation,
+    name: STATES.NAME.VERIFY_DETAILS
+  },
+  {
+    path: '/protectyouraccount',
+    component: ProtectYourAccount,
     name: STATES.NAME.VERIFY_DETAILS
   } /* ,
   {
