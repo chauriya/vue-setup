@@ -1,1 +1,1 @@
-export * from './polRegistrationService';
+export * from './PolRegistrationService';

@@ -2,13 +2,9 @@
   <pri-responsive-page-layout>
     <!-- page-level-errors="vm.transitionInfo.pageLevelErrors" -->
     <v-layout text-center wrap>
-      <h2 class="headline mb-3">
-        {{ $t('POL_HEADER_REGISTRATION') }}
-      </h2>
+      <h2 class="headline mb-3">{{ $t('POL_HEADER_REGISTRATION') }}</h2>
     </v-layout>
-    <h3 class="mb-3">
-      {{ $t('POL_REGISTRATION_INFO') }}
-    </h3>
+    <h3 class="mb-3">{{ $t('POL_REGISTRATION_INFO') }}</h3>
     <v-form ref="registrationFrm">
       <v-row align="center">
         <v-col cols="12">
@@ -47,9 +43,8 @@
             name="cancelButton"
             @click.native="onCancelButtonClick"
             block
+            >{{ $t('POL_CANCEL') }}</PriButton
           >
-            {{ $t('POL_CANCEL') }}
-          </PriButton>
         </v-col>
         <v-col cols="12" sm="6">
           <!-- class="cancelBtn" -->
@@ -59,9 +54,8 @@
             @click.native="onNextButtonClick"
             block
             primary
+            >{{ $t('POL_NEXT') }}</PriButton
           >
-            {{ $t('POL_NEXT') }}
-          </PriButton>
         </v-col>
       </v-row>
     </template>
@@ -76,7 +70,7 @@ import {
   PriDatepicker
 } from '@/shared-components';
 import PriResponsivePageLayout from '@/components/ResponsivePageLayout';
-
+//import RegistationModel from '../shared/services/RegistartionModel';
 export default {
   name: 'registration',
   components: {
