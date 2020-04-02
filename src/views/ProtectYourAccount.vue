@@ -31,16 +31,6 @@
     <template v-slot:bottom>
       <v-row>
         <v-col cols="12" sm="6">
-          <!-- class="nxtBtn" -->
-          <PriButton
-            name="cancelButton"
-            @click.native="onCancelButtonClick"
-            block
-          >
-            {{ $t('POL_CANCEL') }}
-          </PriButton>
-        </v-col>
-        <v-col cols="12" sm="6">
           <!-- class="cancelBtn" -->
           <PriButton
             max-width="20"
@@ -48,9 +38,17 @@
             @click.native="onNextButtonClick"
             block
             primary
+            >{{ $t('POL_NEXT') }}</PriButton
           >
-            {{ $t('POL_NEXT') }}
-          </PriButton>
+        </v-col>
+        <v-col cols="12" sm="6">
+          <!-- class="nxtBtn" -->
+          <PriButton
+            name="cancelButton"
+            @click.native="onCancelButtonClick"
+            block
+            >{{ $t('POL_CANCEL') }}</PriButton
+          >
         </v-col>
       </v-row>
     </template>
