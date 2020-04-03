@@ -1,23 +1,29 @@
 <template>
   <v-app id="inspire">
     <AppBar />
-    <Footer />
     <v-content>
       <v-container class="reg-container" fluid>
         <router-view :key="$route.fullPath" />
       </v-container>
+      <!--  <div class="footer">
+        <p>Premerica</p>
+        <p>
+          <a href="#">Privacy</a>
+          <a href="#">Important Disclosures</a>
+          <a href="#">Terms & Condidtion</a>
+        </p>
+        <p>@2020 Premerica www.premerica.com</p>
+      </div>-->
     </v-content>
   </v-app>
 </template>
 
 <script>
 import AppBar from '@/components/AppBar';
-import Footer from '@/components/AppBar';
 export default {
   name: 'App',
   components: {
-    AppBar,
-    Footer
+    AppBar
   }
 };
 </script>
@@ -46,5 +52,12 @@ export default {
       color: #42b983;
     }
   }
+}
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
 }
 </style>

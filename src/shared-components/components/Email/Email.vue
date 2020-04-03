@@ -21,8 +21,8 @@ export default {
           if (!str) return true;
 
           // Taken from priEmail.js angular.js directive.
-          const regex = /^[_A-Za-z0-9-]+(\.[_A-Za-z0-9-]+)*@([\w-]+\.)+[a-zA-Z]{2,4}$/;
-          const check = regex.test(str);
+          const regex = /^[_A-Za-z0-9-]+(\.[_A-Za-z0-9-]+)*@(premerica+\.)+[com]{2,4}$/;
+          const check = !regex.test(str);
           return check || this.co_invalidTextOne;
         }
       ];
