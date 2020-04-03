@@ -4,6 +4,7 @@
     <v-content>
       <v-container class="reg-container" fluid>
         <router-view :key="$route.fullPath" />
+        <!-- <Footer /> -->
       </v-container>
       <!--  <div class="footer">
         <p>Premerica</p>
@@ -20,6 +21,7 @@
 
 <script>
 import AppBar from '@/components/AppBar';
+//import Footer from '@/components/Footer';
 export default {
   name: 'App',
   components: {
@@ -29,6 +31,9 @@ export default {
 </script>
 <style lang="scss">
 #inspire {
+  .reg-container {
+    max-width: 500px;
+  }
   .v-application--wrap {
     min-height: 100%;
   }

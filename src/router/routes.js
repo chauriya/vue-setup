@@ -10,32 +10,32 @@ const ProtectYourAccountCode = () =>
 
 const routes = [
   {
-    path: '/',
+    path: '/registration',
     component: Registration,
     name: STATES.NAME.REGISTRATION
   },
   {
-    path: '/changePassword',
+    path: '/registration/changePassword',
     component: ChangePassword,
     name: STATES.NAME.CHANGE_PASSWORD
   },
   {
-    path: '/verifyDetails',
+    path: '/registration/verifyDetails',
     component: VerifyDetails,
     name: STATES.NAME.VERIFY_DETAILS
   },
   {
-    path: '/contactInforamtion',
+    path: '/registration/contactInforamtion',
     component: ContactInfromation,
     name: STATES.NAME.Contact_Infromation
   },
   {
-    path: '/protectYourAccount',
+    path: '/registration/protectYourAccount',
     component: ProtectYourAccount,
     name: STATES.NAME.Protect_Your_Account
   },
   {
-    path: '/protectYourAccountCode',
+    path: '/registration/protectYourAccountCode',
     component: ProtectYourAccountCode,
     name: STATES.NAME.Protect_Your_Account_Code
   } /* ,

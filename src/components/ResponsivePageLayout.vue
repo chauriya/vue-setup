@@ -8,7 +8,7 @@
       </section>
       <v-spacer />
       <section class="responsive-footer">
-        <slot name="bottom" />
+        <slot name="footer" />
       </section>
     </v-col>
   </v-row>
