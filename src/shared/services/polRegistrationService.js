@@ -1,10 +1,15 @@
 var baseUrl = 'http://localhost:3000/';
 import axios from 'axios';
-class PolRegistrationService {
-  async getEndpointToAdd(url) {
-    url = baseUrl + url;
-    var data = await axios.get(url, {});
-    return data;
+export default {
+  getRequest(url, headers, params) {
+    return axios.get(baseUrl + url, {
+      headers: headers,
+      params: params
+    });
+  },
+  postRequest(url, headers, body) {
+    return axios.post(baseUrl + url, body, {
+      headers: headers
+    });
   }
-}
-export default new PolRegistrationService();
+};

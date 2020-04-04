@@ -1,5 +1,5 @@
 module.exports = {
-  publicPath: './',
+  publicPath: '/registration',
   pluginOptions: {
     i18n: {
       locale: 'en',

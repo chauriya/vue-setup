@@ -26,7 +26,10 @@ export default {
   name: 'App',
   components: {
     AppBar
-  }
+  },
+  data: () => ({
+    test: 'test'
+  })
 };
 </script>
 <style lang="scss">

@@ -13,23 +13,28 @@
       </v-row>
       <v-row align="center">
         <v-col cols="12">
-          <PriSSN v-model="reg.ssn" />
+          <PriSSN v-model="reg.ssn" required format="ssn" />
         </v-col>
       </v-row>
       <v-row align="center">
         <v-col cols="12">
-          <PriDatepicker v-model="reg.dob" :label="$t('POL_DOB')" />
+          <PriDatepicker v-model="reg.dob" required :label="$t('POL_DOB')" />
         </v-col>
       </v-row>
       <v-row align="center">
         <v-col cols="12">
-          <PriEmail v-model="reg.email" :label="$t('POL_NON_PRI_EMAIL')" />
+          <PriEmail
+            v-model="reg.email"
+            required
+            :label="$t('POL_NON_PRI_EMAIL')"
+          />
         </v-col>
       </v-row>
       <v-row align="center">
         <v-col cols="12">
           <PriEmail
             v-model="reg.confirmemail"
+            required
             :label="$t('POL_CONFIRM_EMAIL')"
           />
         </v-col>
@@ -38,18 +43,17 @@
     <template v-slot:bottom>
       <v-row>
         <v-col cols="12" sm="6">
-          <!-- class="cancelBtn" -->
           <PriButton
             max-width="20"
             name="nextButton"
             @click.native="onNextButtonClick"
             block
+            :disabled="isFormValid()"
             primary
             >{{ $t('POL_NEXT') }}</PriButton
           >
         </v-col>
         <v-col cols="12" sm="6">
-          <!-- class="nxtBtn" -->
           <PriButton
             name="cancelButton"
             @click.native="onCancelButtonClick"
@@ -70,7 +74,6 @@ import {
   PriDatepicker
 } from '@/shared-components';
 import PriResponsivePageLayout from '@/components/ResponsivePageLayout';
-//import RegistationModel from '../shared/services/RegistartionModel';
 export default {
   name: 'registration',
   components: {
@@ -85,17 +88,22 @@ export default {
     reg: {}
   }),
   methods: {
+    isFormValid() {
+      return this.$refs.registrationFrm
+        ? !this.$refs.registrationFrm.validate()
+        : true;
+    },
     onCancelButtonClick() {
+      console.log(this.test);
       return false;
     },
     onNextButtonClick() {
-      //console.log(this.$refs.registrationFrm.validate());
-      this.$router.push({
+      console.log(this.reg);
+      /* this.$router.push({
         name: 'verifyDetails'
-      });
+      }); */
     }
-  },
-  watch: {}
+  }
 };
 </script>
 <style scoped>
@@ -114,12 +122,6 @@ export default {
   text-align: end;
 }
 @media (max-width: 400px) {
-  .cancelBtn {
-    text-align: center;
-  }
-  .nxtBtn {
-    text-align: center;
-  }
   .v-application .primary--text {
     width: inherit !important;
   }
